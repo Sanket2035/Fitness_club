@@ -1,0 +1,217 @@
+/* Custom Styles for Fitness Club Website */
+
+/* General Styles */
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --success-color: #28a745;
+    --warning-color: #ffc107;
+    --danger-color: #dc3545;
+    --light-color: #f8f9fa;
+    --dark-color: #343a40;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+}
+
+/* Header Styles */
+.navbar-custom {
+    background: linear-gradient(to right, var(--dark-color), var(--primary-color));
+    padding: 1rem 0;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+/* Hero Section */
+.hero-section {
+    background-size: cover;
+    background-position: center;
+    min-height: 600px;
+    position: relative;
+    color: white;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* Section Styles */
+.section-title {
+    position: relative;
+    margin-bottom: 3rem;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background-color: var(--primary-color);
+}
+
+/* Card Styles */
+.card {
+    transition: transform 0.3s ease;
+    border: none;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-custom {
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+/* Class Schedule Styles */
+.schedule-tab .nav-link {
+    color: var(--dark-color);
+    font-weight: 500;
+}
+
+.schedule-tab .nav-link.active {
+    color: var(--primary-color);
+    background-color: transparent;
+    border-bottom: 3px solid var(--primary-color);
+}
+
+/* Trainer Cards */
+.trainer-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.trainer-card img {
+    transition: transform 0.3s ease;
+}
+
+.trainer-card:hover img {
+    transform: scale(1.05);
+}
+
+/* Membership Plans */
+.plan-card {
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.plan-card .card-header {
+    background: linear-gradient(45deg, var(--primary-color), #0056b3);
+    color: white;
+    padding: 2rem;
+}
+
+.plan-features li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+/* Contact Form */
+.contact-form input,
+.contact-form textarea {
+    border-radius: 0;
+    border: 1px solid #ddd;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    box-shadow: none;
+    border-color: var(--primary-color);
+}
+
+/* Custom Buttons */
+.btn-custom {
+    border-radius: 25px;
+    padding: 0.5rem 2rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.btn-custom-primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn-custom-primary:hover {
+    background-color: #0056b3;
+    color: white;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: var(--dark-color);
+    color: white;
+    padding: 4rem 0 2rem;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+}
+
+.footer-links li a:hover {
+    color: white;
+}
+
+/* Animations */
+.fade-in {
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .hero-section {
+        min-height: 400px;
+    }
+    
+    .section-title {
+        margin-bottom: 2rem;
+    }
+    
+    .card-custom {
+        margin-bottom: 1.5rem;
+    }
+}
+
+/* Utility Classes */
+.text-primary-custom {
+    color: var(--primary-color) !important;
+}
+
+.bg-primary-custom {
+    background-color: var(--primary-color) !important;
+}
+
+.shadow-custom {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1) !important;
+}
+
+.rounded-custom {
+    border-radius: 15px !important;
+}

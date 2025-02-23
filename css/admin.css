@@ -1,0 +1,199 @@
+/* Admin Panel Styles */
+
+/* Layout */
+.wrapper {
+    display: flex;
+    width: 100%;
+}
+
+#sidebar {
+    min-width: 250px;
+    max-width: 250px;
+    min-height: calc(100vh - 56px);
+    transition: all 0.3s;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+#sidebar.active {
+    margin-left: -250px;
+}
+
+#content {
+    width: 100%;
+    padding: 20px;
+    min-height: calc(100vh - 56px);
+    background: #f8f9fa;
+}
+
+/* Navigation */
+.navbar {
+    padding: 15px 10px;
+    background: #343a40;
+    border: none;
+    border-radius: 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.navbar-brand {
+    padding-left: 10px;
+    font-weight: 600;
+}
+
+/* Sidebar Styles */
+#sidebar .nav-link {
+    padding: 15px 20px;
+    color: #333;
+    border-bottom: 1px solid #ddd;
+    transition: all 0.3s;
+}
+
+#sidebar .nav-link:hover {
+    background: #e9ecef;
+    color: #007bff;
+}
+
+#sidebar .nav-link.active {
+    background: #007bff;
+    color: #fff;
+}
+
+#sidebar .nav-link i {
+    margin-right: 10px;
+    width: 20px;
+    text-align: center;
+}
+
+/* Cards */
+.card {
+    margin-bottom: 20px;
+    border: none;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.card-header {
+    background-color: #fff;
+    border-bottom: 1px solid rgba(0,0,0,.125);
+    padding: 15px;
+}
+
+.border-left-primary {
+    border-left: 4px solid #4e73df;
+}
+
+.border-left-success {
+    border-left: 4px solid #1cc88a;
+}
+
+.border-left-info {
+    border-left: 4px solid #36b9cc;
+}
+
+.border-left-warning {
+    border-left: 4px solid #f6c23e;
+}
+
+/* Tables */
+.table th {
+    font-weight: 600;
+    background: #f8f9fa;
+}
+
+.table td {
+    vertical-align: middle;
+}
+
+/* DataTables Customization */
+.dataTables_wrapper .dataTables_length,
+.dataTables_wrapper .dataTables_filter {
+    margin-bottom: 15px;
+}
+
+.dataTables_wrapper .dataTables_info,
+.dataTables_wrapper .dataTables_paginate {
+    margin-top: 15px;
+}
+
+/* Forms */
+.form-control:focus {
+    border-color: #4e73df;
+    box-shadow: 0 0 0 0.2rem rgba(78,115,223,.25);
+}
+
+.btn-primary {
+    background-color: #4e73df;
+    border-color: #4e73df;
+}
+
+.btn-primary:hover {
+    background-color: #2e59d9;
+    border-color: #2653d4;
+}
+
+/* Stats Cards */
+.stat-card {
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.stat-card i {
+    font-size: 2em;
+    color: #4e73df;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #sidebar {
+        margin-left: -250px;
+    }
+    #sidebar.active {
+        margin-left: 0;
+    }
+    #content {
+        width: 100%;
+    }
+}
+
+/* Utilities */
+.text-xs {
+    font-size: .7rem;
+}
+
+.text-gray-300 {
+    color: #dddfeb!important;
+}
+
+.text-gray-800 {
+    color: #5a5c69!important;
+}
+
+/* Alert Customization */
+.alert {
+    border: none;
+    border-radius: 3px;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+}
+
+.alert-dismissible .btn-close {
+    padding: 1rem;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
